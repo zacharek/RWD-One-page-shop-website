@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/hamburger.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -20,7 +21,20 @@
                     <li><a href="#prices">prices</a></li>
                     <li><a href="#contact">contact</a></li>
                 </ul>
+                <button class="hamburger hamburger--squeeze" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </nav>
+            <div class="triggerMenu">
+                <ul>
+                    <li><a href="#why__us__section">why us</a></li>
+                    <li><a href="#benefits__section">benefits</a></li>
+                    <li><a href="#prices">prices</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
         </div>
     </header>
     <main>
@@ -46,7 +60,7 @@
                         <h3>100000+</h3>
                         <p>daily entries</p>
                     </div>
-                    <div class="info__box__content">
+                    <div class="icon__box__content">
                         <div class="single__icon">
                             <div class="circle blue">
                                 <div class="icon icon__eye"></div>
@@ -55,7 +69,7 @@
                         <h3>2000000+</h3>
                         <p>seen products every day</p>
                     </div>
-                    <div class="info_box__content">
+                    <div class="icon__box__content">
                         <div class="single__icon">
                             <div class="circle green">
                                 <div class="icon icon__catalog"></div>
@@ -77,14 +91,16 @@
                         <div class="line red"></div>
                     </div>
                     <div class="benefits__image">
-                        <div class="macbook"></div>
-                        <div class="macbook__bg"></div>
+                        <div class="desktop__bg">
+                            <div class="desktop"></div>
+                        </div>
                     </div>
                 </div>
                 <div class="benefits__box">
                     <div class="benefits__image">
-                        <div class="phone"></div>
-                        <div class="phone__bg"></div>
+                        <div class="phone__bg">
+                            <div class="phone"></div>
+                        </div>
                     </div>
                     <div class="benefits__text">
                         <h2>Your shop is where you are!</h2>
@@ -113,8 +129,8 @@
             <div class="container">
                 <div class="prices__elements">
                     <div class="prices__item">
-                        <h2>Basic</h2>
                         <div class="price">
+                            <h2>Basic</h2>
                             <p>0$</p>
                         </div>
                         <ul class="prices__basic">
@@ -127,8 +143,8 @@
                         <a href="#" class="prices__button red">Begin</a>
                     </div>
                     <div class="prices__item recommended">
-                        <h2>Professional</h2>
                         <div class="price">
+                            <h2>Professional</h2>
                             <p>25$</p>
                             <h3>Limited offer</h3>
                         </div>
@@ -142,12 +158,12 @@
                         <a href="#" class="prices__button blue">Begin</a>
                     </div>
                     <div class="prices__item">
-                        <h2>Premium</h2>
                         <div class="price">
+                            <h2>Premium</h2>
                             <p>60$</p>
                             <h3>Limited offer</h3>
                         </div>
-                        <ul>
+                        <ul class="ul_premium">
                             <li>2 GB HDD</li>
                             <li>5 Subdomains</li>
                             <li>20 E-mails</li>
@@ -210,5 +226,20 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Look for .hamburger
+        let hamburger = document.querySelector(".hamburger");
+        // On click
+        let menu = document.querySelector(".triggerMenu");
+        hamburger.addEventListener("click", function() {
+            // Toggle class "is-active"
+            hamburger.classList.toggle("is-active");
+            // Do something else, like open/close menu
+        });
+        hamburger.addEventListener('click', function () {
+            menu.classList.toggle("visible")
+        })
+    </script>
 </body>
 </html>
