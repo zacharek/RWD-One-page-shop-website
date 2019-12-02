@@ -29,7 +29,7 @@ nav{
 ul.navigation {
     width: 50vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 ul.navigation li{
     display: flex;
