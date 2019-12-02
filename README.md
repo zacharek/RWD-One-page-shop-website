@@ -1,4 +1,4 @@
 # RWD One-page shop website
-Added support for mobiles to my first workshop(One-page shop website)
+Basic one-page shop with mobile view support
 # Technologies used
-CSS3, HTML5
+CSS3, HTML5, JavaScript
